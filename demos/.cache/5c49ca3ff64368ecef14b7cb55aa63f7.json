@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./camera.html","dynamic":true}],"generated":{"html":"<!DOCTYPE html>\n<html>\n  <head>\n    <title>PoseNet</title>\n  </head>\n  <body>\n    <h1>PoseNet</h1>\n    <ul>\n      <li><a href=\"/dist/8ee4ab4ee7ca5a4cb34aff5a1d7409fc.html\">Camera feed demo</a></li>\n    </ul>\n  </body>\n</html>\n"},"hash":"d1e3759565136c313884acb4bc95f5fc","cacheData":{}}
