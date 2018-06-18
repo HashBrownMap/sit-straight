@@ -18,7 +18,7 @@ import * as tf from '@tensorflow/tfjs';
 import * as posenet from '@tensorflow-models/posenet';
 import { REGULARIZER_IDENTIFIER_REGISTRY_SYMBOL_MAP } from '@tensorflow/tfjs-layers/dist/regularizers';
 
-const color = 'aqua';
+const color = '#ff9933';
 const lineWidth = 2;
 
 function toTuple({ y, x }) {
@@ -51,11 +51,14 @@ export function drawSkeleton(keypoints, minConfidence, ctx, scale = 1) {
 }
 
 export function detectSlouch(keypoints, threshold, ctx, scale = 1) {
-  //console.log(keypoints);
+
+  // if confidence of part is not high enough we dont evaluate.
+
+  if (keypoints[0]['score'] < 0.5 || keypoints[5]['score'] < 0.5 || keypoints[6]['score'] < 0.5) {
+    return false;
+  }
 
   const nose= keypoints[0]['position']['y'];
-  const leftEye = keypoints[1]['position']['y'];
-  const rightEye = keypoints[2]['position']['y'];
   const leftShoulder = keypoints[5]['position']['y'];
   const rightShoulder = keypoints[6]['position']['y'];
 
