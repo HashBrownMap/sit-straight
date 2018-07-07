@@ -11,6 +11,7 @@
   "dependencies": {
     "@tensorflow-models/posenet": "0.1.1",
     "@tensorflow/tfjs": "0.11.4",
+    "push.js": "^1.0.5",
     "stats.js": "^0.17.0"
   },
   "scripts": {

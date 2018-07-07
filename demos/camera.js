@@ -17,6 +17,7 @@
 import dat from 'dat.gui';
 import Stats from 'stats.js';
 import * as posenet from '@tensorflow-models/posenet';
+import Push from 'push.js';
 
 import { drawKeypoints, drawSkeleton, detectSlouch } from './demo_util';
 const videoWidth = 500;
@@ -75,7 +76,7 @@ async function loadVideo() {
 const guiState = {
   algorithm: 'single-pose',
   input: {
-    mobileNetArchitecture: isMobile() ? '0.50' : '0.75',
+    mobileNetArchitecture: isMobile() ? '0.50' : '0.50',
     outputStride: 16,
     imageScaleFactor: 0.5,
   },
@@ -132,7 +133,15 @@ function setupFPS() {
 
 function warnUser() {
 
-  window.alert("STAPH");
+  Push.create("Sit Straight!", {
+    body: "",
+    icon: '',
+    timeout: 4000,
+    onClick: function () {
+        window.focus();
+        this.close();
+    }
+  });
 
 }
 
