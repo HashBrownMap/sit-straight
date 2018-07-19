@@ -143,6 +143,7 @@ function warnUser() {
     }
   });
 
+  window.alert("STAPH");
 }
 
 /**
@@ -219,7 +220,9 @@ function detectPoseInRealTime(video, net) {
         if (guiState.output.showPoints) {
           drawKeypoints(keypoints, minPartConfidence, ctx);
           // var secs = d.getSeconds();
-          if (detectSlouch(keypoints, 1.6, ctx)) {
+          if (keypoints[0]['score'] < 0.5 || keypoints[5]['score'] < 0.5 || keypoints[6]['score'] < 0.5) {
+            const inform = await informUser();
+          } else if (detectSlouch(keypoints, 1.75, ctx)) {
             const warn = await warnUser();
           }
         }
