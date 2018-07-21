@@ -143,7 +143,7 @@ function warnUser() {
     }
   });
 
-  window.alert("STAPH");
+  window.alert("Sit Straight!");
 }
 
 /**
