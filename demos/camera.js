@@ -20,7 +20,7 @@ import Stats from 'stats.js';
 import * as posenet from '@tensorflow-models/posenet';
 import Push from 'push.js';
 
-import { drawKeypoints, drawSkeleton, detectSlouch } from './demo_util';
+import {drawKeypoints, drawSkeleton, detectSlouch} from './demo_util';
 const videoWidth = 500;
 const videoHeight = 500;
 const stats = new Stats();
@@ -56,12 +56,13 @@ async function setupCamera() {
     'video': {
       facingMode: 'user',
       width: mobile ? undefined : videoWidth,
-      height: mobile ? undefined: videoHeight}
+      height: mobile ? undefined: videoHeight,
+    },
   });
   video.srcObject = stream;
 
-  return new Promise(resolve => {
-    video.onloadedmetadata = () => {
+  return new Promise((resolve) => {
+    video.onloadedmetadata = () =>{
       resolve(video);
     };
   });
@@ -124,7 +125,7 @@ function setupGui(cameras, net) {
  */
 function setupFPS() {
   stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
-  //document.body.appendChild(stats.dom);
+  // document.body.appendChild(stats.dom);
 }
 
 
@@ -134,14 +135,14 @@ function setupFPS() {
 
 function warnUser() {
 
-  Push.create("Sit Straight!", {
-    body: "",
+  Push.create('Sit Straight!', {
+    body: '',
     icon: '',
     timeout: 4000,
-    onClick: function () {
+    onClick: function() {
         window.focus();
         this.close();
-    }
+    },
   });
 
   window.alert("Sit Straight!");
