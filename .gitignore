@@ -1,4 +1,6 @@
+node_modules/
 demos/dist/
+demos/node_modules/
 demos/.cache/
 demos/.DS_Store/
 .DS_Store
