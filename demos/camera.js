@@ -13,7 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
- */
+ **/
+
+import dat from 'dat.gui';
 import Stats from 'stats.js';
 import * as posenet from '@tensorflow-models/posenet';
 import Push from 'push.js';
