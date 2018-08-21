@@ -17,7 +17,7 @@
 
 import dat from './node_modules/dat.gui';
 import Stats from './node_modules/stats.js';
-import * as posenet from '@tensorflow-models/posenet';
+import * as posenet from './node_modules/@tensorflow-models/posenet';
 import Push from './node_modules/push.js';
 
 import {drawKeypoints, drawSkeleton, detectSlouch} from './demo_util';
