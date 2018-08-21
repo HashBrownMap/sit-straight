@@ -15,10 +15,10 @@
  * =============================================================================
  **/
 
-import dat from 'dat.gui';
-import Stats from 'stats.js';
+import dat from './node_modules/dat.gui';
+import Stats from './node_modules/stats.js';
 import * as posenet from '@tensorflow-models/posenet';
-import Push from 'push.js';
+import Push from './node_modules/push.js';
 
 import {drawKeypoints, drawSkeleton, detectSlouch} from './demo_util';
 const videoWidth = 500;
