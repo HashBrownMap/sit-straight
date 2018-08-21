@@ -15,7 +15,7 @@
  * =============================================================================
  **/
 
-import dat from '../dat.gui';
+import dat from 'dat.gui';
 import Stats from './node_modules/stats.js';
 import * as posenet from '@tensorflow-models/posenet';
 import Push from './node_modules/push.js';
