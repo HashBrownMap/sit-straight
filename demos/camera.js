@@ -20,7 +20,7 @@ import Stats from 'stats.js';
 import * as posenet from '@tensorflow-models/posenet';
 import Push from 'push.js';
 
-import {drawKeypoints, drawSkeleton, detectSlouch} from 'demo_util';
+import {drawKeypoints, drawSkeleton, detectSlouch} from './demo_util';
 const videoWidth = 500;
 const videoHeight = 500;
 const stats = new Stats();
@@ -148,6 +148,17 @@ function warnUser() {
   window.alert("Sit Straight!");
 }
 
+function informUser(){
+
+  document.getElementById("inform").innerHTML = "Please let your face and shoulders be visible.";
+
+}
+
+function removeInform(){
+  document.getElementById("inform").innerHTML = "";
+
+}
+
 /**
  * Feeds an image to posenet to estimate poses - this is where the magic happens.
  * This function loops with a requestAnimationFrame method.
@@ -226,6 +237,8 @@ function detectPoseInRealTime(video, net) {
             const inform = await informUser();
           } else if (detectSlouch(keypoints, 1.95, ctx)) {
             const warn = await warnUser();
+          } else {
+            const removeInfo = await removeInform();
           }
         }
         if (guiState.output.showSkeleton) {
