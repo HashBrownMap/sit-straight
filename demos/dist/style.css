@@ -1,0 +1,40 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+}
+
+#info{
+    height: 35px;
+    padding-top: 15px;
+}
+
+#inform{
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    font-family: 'Archivo', sans-serif;
+}
+
+#output {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+.footer-text {
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Archivo', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-text, .dg {
+    display: none;
+  }
+}
