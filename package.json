@@ -42,5 +42,8 @@
     "dev": "npm run watch && cd demos && npm run watch",
     "lint": "tslint -p . -t verbose"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3"
+  }
 }

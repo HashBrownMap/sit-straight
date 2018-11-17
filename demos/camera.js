@@ -235,7 +235,7 @@ function detectPoseInRealTime(video, net) {
           // var secs = d.getSeconds();
           if (keypoints[0]['score'] < 0.5 || keypoints[5]['score'] < 0.5 || keypoints[6]['score'] < 0.5) {
             const inform = await informUser();
-          } else if (detectSlouch(keypoints, 1.8, ctx)) {
+          } else if (detectSlouch(keypoints, 1.6, ctx)) {
             const warn = await warnUser();
           } else {
             const removeInfo = await removeInform();
